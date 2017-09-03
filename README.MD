@@ -1,7 +1,11 @@
 # GTA V Priority Tool
-![GTAV Logo](https://vignette.wikia.nocookie.net/gtawiki/images/6/61/Grand_Theft_Auto_V_Logo.png)
-This tool allows you to set GTA 5's priority while it's starting up, without having to fiddle around with the Task Manager.
-Neat huh?
+<p align="center">
+  <img src="http://cdn.wccftech.com/wp-content/uploads/2013/09/gta-v-five-logo-v-only.png">
+  <br />
+  This tool allows you to set GTA 5's priority while it's starting up, without having to fiddle around with the Task Manager.
+  <br />
+  Neat huh?
+</p>
 
 ### How do I use it?
 1. Double-click it to run.
