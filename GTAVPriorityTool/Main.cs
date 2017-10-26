@@ -63,7 +63,7 @@ namespace GTAVPriorityTool
 
                         processesGTA5 = Process.GetProcessesByName("GTA5");
                         processesGTA5Launcher = Process.GetProcessesByName("GTAVLauncher");
-                        System.Threading.Thread.Sleep(10);
+                        System.Threading.Thread.Sleep(100);
                     }
                     else
                     {
