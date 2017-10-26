@@ -41,7 +41,7 @@
             this.Instruction.Dock = System.Windows.Forms.DockStyle.Top;
             this.Instruction.Location = new System.Drawing.Point(0, 0);
             this.Instruction.Name = "Instruction";
-            this.Instruction.Size = new System.Drawing.Size(333, 23);
+            this.Instruction.Size = new System.Drawing.Size(419, 23);
             this.Instruction.TabIndex = 0;
             this.Instruction.Text = "Which level of priority do you want it to use?";
             this.Instruction.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -61,14 +61,14 @@
             "Real-Time"});
             this.Priority.Location = new System.Drawing.Point(12, 25);
             this.Priority.Name = "Priority";
-            this.Priority.Size = new System.Drawing.Size(309, 21);
+            this.Priority.Size = new System.Drawing.Size(395, 21);
             this.Priority.TabIndex = 1;
             this.Priority.SelectedIndexChanged += new System.EventHandler(this.Priority_SelectedIndexChanged);
             // 
             // ConfirmBtn
             // 
             this.ConfirmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ConfirmBtn.Location = new System.Drawing.Point(246, 62);
+            this.ConfirmBtn.Location = new System.Drawing.Point(332, 62);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(75, 23);
             this.ConfirmBtn.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             this.Status.Location = new System.Drawing.Point(9, 54);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(231, 34);
+            this.Status.Size = new System.Drawing.Size(317, 34);
             this.Status.TabIndex = 3;
             this.Status.Text = "Status:\r\nIdle";
             this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 97);
+            this.ClientSize = new System.Drawing.Size(419, 97);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.ConfirmBtn);
             this.Controls.Add(this.Priority);

@@ -57,7 +57,7 @@ namespace GTAVPriorityTool
 
                 while (true)
                 {
-                    if (processesGTA5.Length == 0 && processesGTA5Launcher.Length == 0)
+                    if (processesGTA5.Length == 0 || processesGTA5Launcher.Length == 0)
                     {
                         this.Invoke((MethodInvoker)delegate { Status.Text = "Status:\nWaiting for GTA V to start..."; });
 
