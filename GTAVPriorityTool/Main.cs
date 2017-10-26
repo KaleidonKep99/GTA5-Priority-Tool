@@ -52,25 +52,28 @@ namespace GTAVPriorityTool
         {
             try
             {
-                Process[] processes = Process.GetProcessesByName("GTA5");
+                Process[] processesGTA5 = Process.GetProcessesByName("GTA5");
+                Process[] processesGTA5Launcher = Process.GetProcessesByName("GTAVLauncher");
 
                 while (true)
                 {
-                    if (processes.Length == 0)
+                    if (processesGTA5.Length == 0 && processesGTA5Launcher.Length == 0)
                     {
                         this.Invoke((MethodInvoker)delegate { Status.Text = "Status:\nWaiting for GTA V to start..."; });
 
-                        processes = Process.GetProcessesByName("GTA5");
+                        processesGTA5 = Process.GetProcessesByName("GTA5");
+                        processesGTA5Launcher = Process.GetProcessesByName("GTAVLauncher");
                         System.Threading.Thread.Sleep(10);
                     }
                     else
                     {
-                        foreach (Process proc in processes) proc.PriorityClass = Priorities[IndexOfPriority];
+                        foreach (Process proc in processesGTA5) proc.PriorityClass = Priorities[IndexOfPriority];
+                        foreach (Process proc in processesGTA5Launcher) proc.PriorityClass = Priorities[0];
 
-                        this.Invoke((MethodInvoker)delegate { Status.Text = String.Format("Status:\nGTA V has been set to {0} priority.", Priority.Text); });
+                        this.Invoke((MethodInvoker)delegate { Status.Text = String.Format("Status:\nGTA V's priority set to {0}. Launcher priority set to Low.", Priority.Text); });
                         System.Threading.Thread.Sleep(500);
                         this.Invoke((MethodInvoker)delegate { Status.Text = "Status:\nClosing..."; });
-                        System.Threading.Thread.Sleep(100);
+                        System.Threading.Thread.Sleep(10);
 
                         Environment.Exit(0);
                     }
