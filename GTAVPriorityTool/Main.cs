@@ -54,6 +54,7 @@ namespace GTAVPriorityTool
             {
                 Process[] processesGTA5 = Process.GetProcessesByName("GTA5");
                 Process[] processesGTA5Launcher = Process.GetProcessesByName("GTAVLauncher");
+                Process[] processesSPLauncher = Process.GetProcessesByName("subprocess");
 
                 while (true)
                 {
@@ -63,12 +64,14 @@ namespace GTAVPriorityTool
 
                         processesGTA5 = Process.GetProcessesByName("GTA5");
                         processesGTA5Launcher = Process.GetProcessesByName("GTAVLauncher");
+                        processesSPLauncher = Process.GetProcessesByName("subprocess");
                         System.Threading.Thread.Sleep(100);
                     }
                     else
                     {
                         foreach (Process proc in processesGTA5) proc.PriorityClass = Priorities[IndexOfPriority];
                         foreach (Process proc in processesGTA5Launcher) proc.PriorityClass = Priorities[0];
+                        foreach (Process proc in processesSPLauncher) proc.PriorityClass = Priorities[0];
 
                         this.Invoke((MethodInvoker)delegate { Status.Text = String.Format("Status:\nGTA V's priority set to {0}. Launcher priority set to Low.", Priority.Text); });
                         System.Threading.Thread.Sleep(500);
